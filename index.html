@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Page Title</title>
+</head>
+<body>
+  <script>
+    // Your JavaScript goes here!
+    let playerScore =  0
+    let computerScore = 0
+
+    for (let i = 0; i < 5; i++) {
+        let rndInt = Math.floor(Math.random() * (4 - 1)) + 1;
+        let computerSelection
+
+        if (rndInt == 1) {
+            computerSelection = 'Rock';
+        } 
+        if (rndInt == 2) {
+            computerSelection = 'Scissors';
+        }
+        if (rndInt == 3) {
+            computerSelection = 'Paper';
+        }
+
+        let playerSelection = window.prompt("Please enter Rock, Paper, or Scissors");
+
+        function playRound(playerSelection, computerSelection) {
+            if (playerSelection == 'Rock') {
+                if (computerSelection == 'Rock') {
+                return "It's a tie!";
+                }
+                if (computerSelection == 'Scissors') {
+                return "You win!";
+                }
+                if (computerSelection == 'Paper') {
+                return "You lose!";
+                }
+            }
+
+            if (playerSelection == 'Paper') {
+                if (computerSelection == 'Paper') {
+                    return "It's a tie!";
+                }
+
+                if (computerSelection == 'Rock') {
+                    return "You win!";
+                }
+
+
+                if (computerSelection == 'Scissors') {
+                    return "You lose!";
+                }
+
+            }
+
+            if (playerSelection == 'Scissors') {
+                if (computerSelection == 'Scissors') {
+                    return "It's a tie!"
+                }
+
+
+                if (computerSelection == 'Paper') {
+                    return "You win!"
+                }
+
+                if (computerSelection == 'Rock') {
+                    return "You lose!"
+                }
+
+            }
+        }
+        if (playRound(playerSelection, computerSelection) == "You win!") {
+            playerScore++
+        }
+        if (playRound(playerSelection, computerSelection) == "You lose!") {
+            computerScore++
+        }
+        console.log('You chose ' + playerSelection + '. The computer chose ' + computerSelection + ". " + playRound(playerSelection, computerSelection));
+    }
+   
+    if (playerScore > computerScore) {
+        console.log('You beat the computer!')
+    } else {
+        console.log('The computer beat you!')
+    }
+
+  </script>
+</body>
+</html>
