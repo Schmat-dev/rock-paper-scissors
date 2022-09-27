@@ -1,0 +1,47 @@
+body {
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    font-family: Roboto, sans-serif;
+  }
+
+.btnContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.score-container{
+    display: flex;
+    justify-content: center;
+}
+
+.player-container,
+.computer-container{
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+    margin: 10px;
+    gap: 4px;
+}
+
+#announcer{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+  button {
+    font-family: Roboto, sans-serif;
+    border: none;
+    padding: 8px;
+    margin: 8px;
+    border-radius: 8px;
+    background: coral;
+  }
+
+  .header {
+    display: flex;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }
